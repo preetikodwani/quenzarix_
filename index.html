@@ -1,368 +1,484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quenzarix | Smart IT Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quenzarix | Smart IT Solutions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-	background: #EEAECA;
-background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #050c3d, #1d2961);
-      color: #fff;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-	border-radius: 30px;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .hero {
-      text-align: center;
-      border-radius: 30px;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(to right, #ff7a59, #f9a826);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      color: black;
-    }
-    .services, .testimonials, .pricing, .contact {
-      margin-top: 3rem;
-      border: linear-gradient(to right, #ff7a59, #f9a826);
-	color: black;
-    }
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: linear-gradient(to bottom, #ffffff10, #ffffff05);
-      background-image: linear-gradient(-90deg, red, blue);
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      backdrop-filter: blur(5px);
-      border: linear-gradient(-90deg, red, blue);
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-}
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: white;
-      
-    }
-    .card p {
-      color: white;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #eeaeca;
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        color: #f1f1f1;
+        line-height: 1.6;
+      }
+      html {
+        font-size: calc(12px + 0.5vw);
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 1rem;
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      header {
+        background: linear-gradient(to right, #050c3d, #1d2961);
+        color: #fff;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 30px;
+      }
+      section {
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+      @media (max-width: 768px) {
+        .hero {
+          padding: 2rem 1rem;
+          border-radius: 20px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+          color: black;
+        }
+
+        .hero p {
+          font-size: 1rem;
+          padding: 0 1rem;
+          color: black;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+
+        .hero p {
+          font-size: 0.95rem;
+          padding: 0 0.5rem;
+        }
+      }
+
+      .services,
+      .testimonials,
+      .pricing,
+      .contact {
+        margin-top: 3rem;
+        border: linear-gradient(to right, #ff7a59, #f9a826);
+        color: black;
+      }
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+      }
+      .card {
+        background: linear-gradient(to bottom, #ffffff10, #ffffff05);
+        background-image: linear-gradient(-90deg, red, blue);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(5px);
+        border: linear-gradient(-90deg, red, blue);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+      .card h3 {
+        margin-bottom: 0.5rem;
+        color: white;
+      }
+      .card p {
+        color: white;
+      }
+
+      .card strong {
+        color: white;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      input,
+      textarea,
+      button {
+        padding: 0.8rem;
+        border: linear-gradient(-90deg, red, blue);
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      input,
+      textarea {
+        background: rgba(255, 255, 255, 0.05);
+        color: black;
+        border: linear-gradient(-90deg, red, blue);
+        border-radius: 30px;
+      }
+      button {
+        background: linear-gradient(to right, #ff7a59, #f9a826);
+        color: white;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        font-weight: bold;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      footer {
+        background: #050c3d;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+      }
+      .book-meeting {
+        margin-top: 3rem;
+        text-align: center;
+        color: black;
+      }
+
+      .book-meeting h2 {
+        margin-bottom: 0.5rem;
+        color: #ff7a59;
+      }
+
+      .book-meeting p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #333;
+      }
+
+      .btn-book-meeting {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background: linear-gradient(to right, #ff7a59, #f9a826);
+        color: white;
+        font-weight: bold;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .btn-book-meeting:hover {
+        opacity: 0.8;
+      }
+
+      .cal-container {
+        position: relative;
+        padding-bottom: 75%; /* 4:3 ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .cal-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const phone = document.querySelector('input[name="phone"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+
+      const formData = new FormData();
+      formData.append("entry.1234567890", name); // Replace with your actual field ID
+      formData.append("entry.0987654321", email); // Replace with your actual field ID
+      formData.append("entry.5555555555", phone); // NEW — Replace with actual field ID
+      formData.append("entry.1122334455", message); // Replace with your actual field ID
+
+      fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSeZZcm3f6HW4WC9D1nBbBgdgbZGacmqE6Sx721Hxp0oAnX2lw/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      )
+        .then(() => alert("Thank you! Your message has been submitted."))
+        .catch(() => alert("There was an error. Please try again later."));
     }
 
-.card strong{
-color: white;
-}
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea, button {
-      padding: 0.8rem;
-      border:  linear-gradient(-90deg, red, blue);
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    input, textarea {
-      background: rgba(255, 255, 255, 0.05);
-      color: black;
-      border:  linear-gradient(-90deg, red, blue); 
-      border-radius: 30px;
-    }
-    button {
-      background: linear-gradient(to right, #ff7a59, #f9a826);
-      color: white;
-      cursor: pointer;
-      transition: opacity 0.3s;
-      font-weight: bold;
-    }
-    button:hover {
-      opacity: 0.8;
-    }
-    footer {
-      background: #050c3d;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 2rem;
-      margin-top: 2rem;
-    }
-.book-meeting {
-  margin-top: 3rem;
-  text-align: center;
-  color: black;
-}
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        emailjs
+          .sendForm("kodwanipreet@gmail.com", "kodwanipreet@gmail.com", this)
+          .then(
+            () => alert("Message sent!"),
+            (err) => alert("Failed to send")
+          );
+      });
+  </script>
+  <body>
+    <header>
+      <h1>Quenzarix</h1>
+      <p>Your Partner in AI, Web, App & Immersive Technologies</p>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-.book-meeting h2 {
-  margin-bottom: 0.5rem;
-  color: #ff7a59;
-}
+    <section id="home" class="hero">
+      <video width="640" height="360" autoplay muted>
+        <source
+          src="C:/Users/Preeti/Downloads/quenzarix/439158c7-7737-455d-8e26-e23003ae82a6.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-.book-meeting p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #333;
-}
+      <h1>Smart IT Solutions for the Future</h1>
+      <p>
+        From machine learning to immersive VR, we help you innovate and lead
+        with tech.
+      </p>
+    </section>
 
-.btn-book-meeting {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  background: linear-gradient(to right, #ff7a59, #f9a826);
-  color: white;
-  font-weight: bold;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.btn-book-meeting:hover {
-  opacity: 0.8;
-}
-
-.cal-container {
-      position: relative;
-      padding-bottom: 75%; /* 4:3 ratio */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-    }
-    .cal-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-  </style>
-
-  </style>
-
-
-</head>
-
-<script>
-  function handleFormSubmit(event) {
-    event.preventDefault();
-
-    const name = document.querySelector('input[name="name"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const phone = document.querySelector('input[name="phone"]').value;
-    const message = document.querySelector('textarea[name="message"]').value;
-
-    const formData = new FormData();
-    formData.append("entry.1234567890", name);    // Replace with your actual field ID
-    formData.append("entry.0987654321", email);   // Replace with your actual field ID
-    formData.append("entry.5555555555", phone);   // NEW — Replace with actual field ID
-    formData.append("entry.1122334455", message); // Replace with your actual field ID
-
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeZZcm3f6HW4WC9D1nBbBgdgbZGacmqE6Sx721Hxp0oAnX2lw/formResponse", {
-      method: "POST",
-      mode: "no-cors",
-      body: formData,
-    })
-    .then(() => alert("Thank you! Your message has been submitted."))
-    .catch(() => alert("There was an error. Please try again later."));
-  }
-
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-  emailjs.sendForm("kodwanipreet@gmail.com", "kodwanipreet@gmail.com", this)
-    .then(() => alert("Message sent!"), (err) => alert("Failed to send"));
-});
-
-</script>
-<body>
-  <header>
-    <h1>Quenzarix</h1>
-    <p>Your Partner in AI, Web, App & Immersive Technologies</p>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="home" class="hero">
-	<video width="640" height="360" autoplay muted>
-    <source src="439158c7-7737-455d-8e26-e23003ae82a6.mp4" type="video/mp4">
-    <source src="video.ogg" type="video/ogg">
-    Your browser does not support the video tag.
-</video>
-
-
-    <h1>Smart IT Solutions for the Future</h1>
-    <p>From machine learning to immersive VR, we help you innovate and lead with tech.</p>
-  </section>
-
-
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>AI/ML Development</h3>
-        <p>Build intelligent systems with predictive analytics, computer vision, NLP & more.</p>
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>AI/ML Development</h3>
+          <p>
+            Build intelligent systems with predictive analytics, computer
+            vision, NLP & more.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>
+            Custom websites, portals & dashboards tailored to your business
+            goals.
+          </p>
+        </div>
+        <div class="card">
+          <h3>App Development</h3>
+          <p>Cross-platform mobile apps with smooth UI and powerful backend.</p>
+        </div>
+        <div class="card">
+          <h3>VR/AR Solutions</h3>
+          <p>
+            Immersive 3D experiences, virtual walkthroughs, training simulations
+            & more.
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Custom websites, portals & dashboards tailored to your business goals.</p>
+    </section>
+
+    <section id="book-meeting" class="book-meeting">
+      <h2>Book the Meeting</h2>
+      <p>Ready to discuss your project? Schedule a meeting with us now!</p>
+      <a href="/call.html" class="btn-book-meeting">Book the Meeting</a>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>What Clients Say</h2>
+      <div class="card-container">
+        <div class="card">
+          <p>
+            "Quenzarix transformed our real estate portal with stunning 3D VR
+            tours. Sales doubled!"
+          </p>
+          <strong>— Nisha V., Realty CEO</strong>
+        </div>
+        <div class="card">
+          <p>
+            "The AI recommendation engine they built increased our conversions
+            by 43%."
+          </p>
+          <strong>— Raj M., eCommerce Director</strong>
+        </div>
       </div>
-      <div class="card">
-        <h3>App Development</h3>
-        <p>Cross-platform mobile apps with smooth UI and powerful backend.</p>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Pricing Plans</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Basic</h3>
+          <p>
+            ₹1,00,000<br />Landing Page / Static Website<br />Email & Chat
+            Support
+          </p>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <p>
+            ₹6,00,000*br>Custom Web App / ML Model<br />Hosting & API
+            Integration
+          </p>
+        </div>
+        <div class="card">
+          <h3>Enterprise</h3>
+          <p>
+            ₹1500000<br />VR/AR + SaaS + Mobile App<br />Dedicated Team & SLA
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h3>VR/AR Solutions</h3>
-        <p>Immersive 3D experiences, virtual walkthroughs, training simulations & more.</p>
+    </section>
+
+    <section>
+      <div
+        style="
+          font-family: Arial, sans-serif;
+          max-width: 700px;
+          margin: auto;
+          line-height: 1.6;
+          color: #333;
+        "
+      >
+        <h2 style="color: #2c3e50">
+          What You’ll Get in Your Free Strategy Session:
+        </h2>
+
+        <ul style="list-style: none; padding: 0">
+          <li style="margin-bottom: 20px">
+            <span style="color: green; font-weight: bold"
+              >✓ Personalized Product Growth Analysis</span
+            ><br />
+            <span
+              >We’ll review your current SaaS platform and identify key
+              automation and optimization opportunities.</span
+            >
+          </li>
+
+          <li style="margin-bottom: 20px">
+            <span style="color: green; font-weight: bold"
+              >✓ Custom AI-Powered Roadmap</span
+            ><br />
+            <span
+              >Receive a tailored plan to integrate AI agents that enhance your
+              software’s capabilities and user experience.</span
+            >
+          </li>
+
+          <li style="margin-bottom: 20px">
+            <span style="color: green; font-weight: bold"
+              >✓ Impact & ROI Projection</span
+            ><br />
+            <span
+              >Discover how AI automation can improve customer retention,
+              operational efficiency, and revenue growth.</span
+            >
+          </li>
+
+          <li style="margin-bottom: 20px">
+            <span style="color: green; font-weight: bold"
+              >✓ No-Obligation Consultation</span
+            ><br />
+            <span
+              >Gain valuable insights to help your SaaS business thrive—whether
+              or not you choose to move forward with us.</span
+            >
+          </li>
+        </ul>
+
+        <p style="font-weight: bold; color: #2c3e50">
+          Multiple Ways to Connect:
+        </p>
+
+        <p style="font-weight: bold; color: #2c3e50">+91-9869043555</p>
+
+        <h1>Schedule a Call</h1>
+
+        <div class="cal-container">
+          <iframe
+            src="https://cal.com/er.-preeti-kodwani-wvj2dl"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<section id="book-meeting" class="book-meeting">
-  <h2>Book the Meeting</h2>
-  <p>Ready to discuss your project? Schedule a meeting with us now!</p>
-  <a href="/call.html" class="btn-book-meeting">Book the Meeting</a>
-</section>
+    <form action="https://formspree.io/f/xpwrpzyg" method="POST">
+      <h2>Contact Us</h2>
 
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
 
-  <section id="testimonials" class="testimonials">
-    <h2>What Clients Say</h2>
-    <div class="card-container">
-      <div class="card">
-        <p>"Quenzarix transformed our real estate portal with stunning 3D VR tours. Sales doubled!"</p>
-        <strong>— Nisha V., Realty CEO</strong>
-      </div>
-      <div class="card">
-        <p>"The AI recommendation engine they built increased our conversions by 43%."</p>
-        <strong>— Raj M., eCommerce Director</strong>
-      </div>
-    </div>
-  </section>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
 
-  <section id="pricing" class="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Basic</h3>
-        <p>₹1,00,000<br>Landing Page / Static Website<br>Email & Chat Support</p>
-      </div>
-      <div class="card">
-        <h3>Pro</h3>
-        <p>₹6,00,000*br>Custom Web App / ML Model<br>Hosting & API Integration</p>
-      </div>
-      <div class="card">
-        <h3>Enterprise</h3>
-        <p>₹1500000<br>VR/AR + SaaS + Mobile App<br>Dedicated Team & SLA</p>
-      </div>
-    </div>
-  </section>
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{10}"
+        placeholder="Enter 10-digit phone number"
+        required
+      />
 
-<section>
-<div style="font-family: Arial, sans-serif; max-width: 700px; margin: auto; line-height: 1.6; color: #333;">
-  <h2 style="color: #2c3e50;">What You’ll Get in Your Free Strategy Session:</h2>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-  <ul style="list-style: none; padding: 0;">
-    <li style="margin-bottom: 20px;">
-      <span style="color: green; font-weight: bold;">✓ Personalized Product Growth Analysis</span><br />
-      <span>We’ll review your current SaaS platform and identify key automation and optimization opportunities.</span>
-    </li>
+      <button type="submit">Send Message</button>
+    </form>
 
-    <li style="margin-bottom: 20px;">
-      <span style="color: green; font-weight: bold;">✓ Custom AI-Powered Roadmap</span><br />
-      <span>Receive a tailored plan to integrate AI agents that enhance your software’s capabilities and user experience.</span>
-    </li>
-
-    <li style="margin-bottom: 20px;">
-      <span style="color: green; font-weight: bold;">✓ Impact & ROI Projection</span><br />
-      <span>Discover how AI automation can improve customer retention, operational efficiency, and revenue growth.</span>
-    </li>
-
-    <li style="margin-bottom: 20px;">
-      <span style="color: green; font-weight: bold;">✓ No-Obligation Consultation</span><br />
-      <span>Gain valuable insights to help your SaaS business thrive—whether or not you choose to move forward with us.</span>
-    </li>
-  </ul>
-
-  <p style="font-weight: bold; color: #2c3e50;">Multiple Ways to Connect:</p>
-
- <p style="font-weight: bold; color: #2c3e50;">+91-9869043555</p>
-
-<h1>Schedule a Call</h1>
-
-  <div class="cal-container">
-    <iframe src="https://cal.com/er.-preeti-kodwani-wvj2dl" frameborder="0" allowfullscreen></iframe>
-  </div>
- 
-
-</div>
-</section>
-
-  <form action="https://formspree.io/f/xpwrpzyg" method="POST">
-
-  <h2>Contact Us</h2>
-    
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required />
-    
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required />
-    
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required />
-
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-    
-    <button type="submit">Send Message</button>
-  </form>
-
-
-
-  <footer>
-    <p>&copy; 2025 Quenzarix. All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Quenzarix. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
