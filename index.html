@@ -90,11 +90,13 @@
       @media (max-width: 480px) {
         .hero h1 {
           font-size: 1.6rem;
+          color: black;
         }
 
         .hero p {
           font-size: 0.95rem;
           padding: 0 0.5rem;
+          color: black;
         }
       }
 
@@ -288,8 +290,27 @@
         Your browser does not support the video tag.
       </video>
 
-      <h1>Smart IT Solutions for the Future</h1>
-      <p>
+      <h1
+        style="
+          font-size: calc(1.6rem + 1vw);
+          margin-bottom: 1rem;
+          background: linear-gradient(to right, #ff7a59, #f9a826);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+        "
+      >
+        Smart IT Solutions for the Future
+      </h1>
+
+      <p
+        style="
+          font-size: calc(0.9rem + 0.3vw);
+          color: black;
+          text-align: center;
+          padding: 0 1rem;
+        "
+      >
         From machine learning to immersive VR, we help you innovate and lead
         with tech.
       </p>
